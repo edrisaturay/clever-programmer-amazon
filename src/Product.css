@@ -28,6 +28,9 @@
     margin-top: 5px;
 }
 
+.product__rating{
+    display: flex;
+}
 
 .product > button {
     background: #f0c14b; 
