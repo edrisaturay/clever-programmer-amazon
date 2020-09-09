@@ -1,31 +1,33 @@
-import React from 'react';
-import './App.css';
-import Header from './Header'
-import Home from "./Home"
-import Checkout from "./Checkout"
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
+import React from "react";
+import "./App.css";
+import Header from "./Header";
+import Home from "./Home";
+import Checkout from "./Checkout";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import { ImageSlider } from "./imageSlider/imageslider";
 
 function App() {
   return (
     <Router>
-    <div className="App">
-      {/*<h1>Hello Clever Programmers, let's build the amazon store :rock</h1>*/}
-      {/*Header*/}
-      
-      <Header />
+      <div className="App">
+        {/*<h1>Hello Clever Programmers, let's build the amazon store :rock</h1>*/}
+        {/*Header*/}
 
-      <Switch>
-        
-        <Route path="/checkout">
-          <Checkout />
-        </Route>
+        <Header />
 
-        <Route path="/">
-          <Home/>
-        </Route>
-
-      </Switch>
-    </div>
+        <Switch>
+          <Route path="/checkout">
+            <Checkout />
+          </Route>
+          <Route path="/imageSlider">
+            <ImageSlider />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
     </Router>
   );
 }
